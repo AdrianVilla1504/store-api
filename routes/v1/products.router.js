@@ -34,6 +34,14 @@ router.post('/', (req, res) => {
   res.status(201).json(newProduct);
 })
 
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const body = req.body;
+  const product = service.update(id, body);
+  res.json(product);
+})
+
+
 router.put('/:id', (req, res) => {
   const { id } = req.params;
   const body = req.body;
@@ -43,14 +51,6 @@ router.put('/:id', (req, res) => {
   })
 })
 
-router.patch('/:id', (req, res) => {
-  const { id } = req.params;
-  const body = req.body;
-  res.json({
-    message: 'success',
-    data: body
-  })
-})
 
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
