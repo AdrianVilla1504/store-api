@@ -185,3 +185,5 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+postgres_data
