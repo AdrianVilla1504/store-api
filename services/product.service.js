@@ -62,7 +62,6 @@ class ProductService {
     }
 
     return this.products[index];
-
   }
 
   async delete(id){
@@ -72,7 +71,6 @@ class ProductService {
     }
     this.products.splice(index, 1);
     return { id };
-
   }
 }
 
